@@ -10,3 +10,16 @@ services:
     volumes:
       - ./app/reference:/app/reference  # mount face image storage
     command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  # development
+  face-ai-service-dev:
+    image: face-ai-service-dev:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: face-ai-service-dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app # mount local code
+    command: sleep infinity
