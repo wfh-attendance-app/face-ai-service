@@ -1,1 +1,1 @@
-# face-service
+# face-ai-service
