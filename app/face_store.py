@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 class FaceStore:
-    def __init__(self, reference_dir="/app/reference"):
+    def __init__(self, reference_dir="reference"):
         self.reference_dir = reference_dir
         self.user_ids = []
         self.embeddings = []
