@@ -23,3 +23,8 @@ services:
     volumes:
       - ./app:/app # mount local code
     command: sleep infinity
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
